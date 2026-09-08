@@ -1,0 +1,92 @@
+{
+  "name": "Bee & Beauty - Nature, Refined",
+  "version": "1.0.0",
+  "theme_author": "Bee & Beauty Studio",
+  "support_email": "support@beeandbeauty.online",
+  "documentation_url": "https://beeandbeauty.online",
+  "license": "Commercial",
+  "settings_schema": [
+    {
+      "name": "theme_info",
+      "theme_name": "Bee & Beauty",
+      "theme_version": "1.0.0",
+      "theme_author": "Bee & Beauty Studio",
+      "theme_documentation_url": "https://beeandbeauty.online",
+      "theme_support_email": "support@beeandbeauty.online"
+    },
+    {
+      "name": "Colors",
+      "settings": [
+        {
+          "type": "color",
+          "id": "color_primary",
+          "label": "Primary Color (Plum)",
+          "default": "#7A1245"
+        },
+        {
+          "type": "color",
+          "id": "color_primary_deep",
+          "label": "Primary Deep",
+          "default": "#2B0518"
+        },
+        {
+          "type": "color",
+          "id": "color_secondary",
+          "label": "Secondary Color (Honey Gold)",
+          "default": "#C6941F"
+        },
+        {
+          "type": "color",
+          "id": "color_honey_light",
+          "label": "Honey Light",
+          "default": "#E8C77A"
+        },
+        {
+          "type": "color",
+          "id": "color_background",
+          "label": "Background (Cream)",
+          "default": "#FDF6EC"
+        },
+        {
+          "type": "color",
+          "id": "color_blush",
+          "label": "Blush Accent",
+          "default": "#F3D6E0"
+        },
+        {
+          "type": "color",
+          "id": "color_sage",
+          "label": "Sage Accent",
+          "default": "#7C8A6E"
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "settings": [
+        {
+          "type": "font_picker",
+          "id": "type_header_font",
+          "label": "Heading Font",
+          "default": "cormorant_garamond_n6"
+        },
+        {
+          "type": "font_picker",
+          "id": "type_body_font",
+          "label": "Body Font",
+          "default": "karla_n4"
+        }
+      ]
+    },
+    {
+      "name": "Favicon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "favicon",
+          "label": "Favicon image"
+        }
+      ]
+    }
+  ]
+}
