@@ -1,0 +1,51 @@
+{% comment %}
+  CSS Variables Snippet - Bee & Beauty Theme
+  Defines all CSS custom properties for the theme's design system
+{% endcomment %}
+
+<style>
+  :root {
+    /* Brand Colors from Settings */
+    --color-primary: {{ settings.color_primary }};
+    --color-primary-deep: {{ settings.color_primary_deep }};
+    --color-secondary: {{ settings.color_secondary }};
+    --color-honey-light: {{ settings.color_honey_light }};
+    --color-background: {{ settings.color_background }};
+    --color-blush: {{ settings.color_blush }};
+    --color-sage: {{ settings.color_sage }};
+    
+    /* HSL Color Values for Tailwind compatibility */
+    --plum-primary: 330.6 74.3% 27.5%;
+    --plum-deep: 330 79.2% 9.4%;
+    --honey-gold: 42 72.9% 44.9%;
+    --honey-light: 42 70.5% 69.4%;
+    --cream-bg: 36 45% 97%;
+    --blush: 339.3 54.7% 89.6%;
+    --sage: 90 11.3% 48.6%;
+    
+    /* Theme color mappings */
+    --background: var(--cream-bg);
+    --foreground: 325 40% 12%;
+    --card: 40 60% 99%;
+    --card-foreground: 325 40% 12%;
+    --primary: var(--plum-primary);
+    --primary-foreground: 36 78.9% 96.3%;
+    --secondary: var(--honey-gold);
+    --secondary-foreground: 330 76.2% 16.5%;
+    --muted: 339 32% 94.5%;
+    --muted-foreground: 330 18% 40%;
+    --accent: var(--blush);
+    --accent-foreground: var(--plum-primary);
+    --border: 335 30% 88%;
+    --ring: var(--plum-primary);
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--plum-primary)) 0%, hsl(var(--plum-deep)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 80% 52%) 0%, hsl(var(--honey-light)) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 20px 60px -15px hsl(var(--plum-primary) / 0.35);
+    --shadow-gold: 0 10px 30px -10px hsl(var(--honey-gold) / 0.45);
+  }
+</style>
