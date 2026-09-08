@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bee & Beauty — "Nature, refined."
+   Design tokens: magenta/plum + honey-gold on warm cream, luxury clean beauty.
+   All colors are HSL channel values (no hsl()/oklch() wrappers here). */
+
+@layer base {
+  :root {
+    --background: 36 45% 97%;
+    --foreground: 325 40% 12%;
+
+    --card: 40 60% 99%;
+    --card-foreground: 325 40% 12%;
+
+    --popover: 40 60% 99%;
+    --popover-foreground: 325 40% 12%;
+
+    --primary: 330.6 74.3% 27.5%;
+    --primary-foreground: 36 78.9% 96.3%;
+
+    --secondary: 42 72.9% 44.9%;
+    --secondary-foreground: 330 76.2% 16.5%;
+
+    --muted: 339 32% 94.5%;
+    --muted-foreground: 330 18% 40%;
+
+    --accent: 339.3 54.7% 89.6%;
+    --accent-foreground: 330.6 74.3% 27.5%;
+
+    --destructive: 6 68% 44%;
+    --destructive-foreground: 36 80% 97%;
+
+    --border: 335 30% 88%;
+    --input: 335 30% 88%;
+    --ring: 330.6 74.3% 27.5%;
+
+    --radius: 0.75rem;
+
+    /* Extended brand tokens (used via bg-[hsl(var(--token))] utilities) */
+    --plum-deep: 330 79.2% 9.4%;
+    --plum-dark: 330 76.2% 16.5%;
+    --honey-light: 42 70.5% 69.4%;
+    --sage: 90 11.3% 48.6%;
+    --sage-foreground: 90 15% 96%;
+    --ink: 325 40% 11.8%;
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(330.6 74.3% 27.5%) 0%,
+      hsl(330 79.2% 9.4%) 100%
+    );
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(42 80% 52%) 0%,
+      hsl(42 70.5% 69.4%) 100%
+    );
+    --shadow-elegant: 0 20px 60px -15px hsl(330.6 74.3% 27.5% / 0.35);
+    --shadow-gold: 0 10px 30px -10px hsl(42 72.9% 44.9% / 0.45);
+
+    --sidebar-background: 330 79.2% 9.4%;
+    --sidebar-foreground: 36 45% 92%;
+    --sidebar-primary: 42 72.9% 44.9%;
+    --sidebar-primary-foreground: 330 79.2% 9.4%;
+    --sidebar-accent: 330 55% 18%;
+    --sidebar-accent-foreground: 42 70.5% 79%;
+    --sidebar-border: 330 45% 20%;
+    --sidebar-ring: 42 72.9% 44.9%;
+  }
+
+  .dark {
+    --background: 330 45% 6%;
+    --foreground: 36 45% 93%;
+
+    --card: 330 40% 9%;
+    --card-foreground: 36 45% 93%;
+
+    --popover: 330 40% 9%;
+    --popover-foreground: 36 45% 93%;
+
+    --primary: 42 72.9% 44.9%;
+    --primary-foreground: 330 79.2% 9.4%;
+
+    --secondary: 330.6 55% 22%;
+    --secondary-foreground: 36 60% 92%;
+
+    --muted: 330 25% 16%;
+    --muted-foreground: 335 20% 70%;
+
+    --accent: 330 40% 20%;
+    --accent-foreground: 42 70.5% 79%;
+
+    --destructive: 6 60% 40%;
+    --destructive-foreground: 36 80% 97%;
+
+    --border: 330 30% 18%;
+    --input: 330 30% 18%;
+    --ring: 42 72.9% 44.9%;
+
+    --sidebar-background: 330 60% 5%;
+    --sidebar-foreground: 36 45% 92%;
+    --sidebar-primary: 42 72.9% 44.9%;
+    --sidebar-primary-foreground: 330 79.2% 9.4%;
+    --sidebar-accent: 330 45% 14%;
+    --sidebar-accent-foreground: 42 70.5% 79%;
+    --sidebar-border: 330 40% 16%;
+    --sidebar-ring: 42 72.9% 44.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Karla", sans-serif;
+    background-image:
+      radial-gradient(
+        circle at 100% 0%,
+        hsl(var(--accent) / 0.35),
+        transparent 55%
+      ),
+      radial-gradient(
+        circle at 0% 100%,
+        hsl(var(--secondary) / 0.12),
+        transparent 45%
+      );
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Cormorant Garamond", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Cormorant Garamond", serif;
+  }
+  .font-body {
+    font-family: "Karla", sans-serif;
+  }
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  .text-gradient-gold {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

@@ -1,0 +1,44 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "@/context/CartContext";
+import HomePage from "./pages/HomePage";
+import BrandGuidelines from "./pages/BrandGuidelines";
+import ContentLibrary from "./pages/ContentLibrary";
+import ContentCalendar from "./pages/ContentCalendar";
+import ProductStorytelling from "./pages/ProductStorytelling";
+import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <CartProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/studio" element={<BrandGuidelines />} />
+            <Route
+              path="/studio/content-library"
+              element={<ContentLibrary />}
+            />
+            <Route path="/studio/calendar" element={<ContentCalendar />} />
+            <Route
+              path="/studio/product-storytelling"
+              element={<ProductStorytelling />}
+            />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E8C77A"/>
+      <stop offset="1" stop-color="#C6941F"/>
+    </linearGradient>
+  </defs>
+  <polygon points="32,2 59,17 59,47 32,62 5,47 5,17" fill="#4A0A2A"/>
+  <polygon points="32,8 53,20 53,44 32,56 11,44 11,20" fill="none" stroke="url(#g)" stroke-width="1.5"/>
+  <g transform="translate(32,32)">
+    <ellipse cx="0" cy="-2" rx="8" ry="10" fill="url(#g)"/>
+    <path d="M -8 -10 C -16 -16 -20 -6 -9 -3 Z" fill="url(#g)" opacity="0.85"/>
+    <path d="M 8 -10 C 16 -16 20 -6 9 -3 Z" fill="url(#g)" opacity="0.85"/>
+    <rect x="-8" y="-6" width="16" height="2.4" fill="#4A0A2A"/>
+    <rect x="-8" y="-1" width="16" height="2.4" fill="#4A0A2A"/>
+    <rect x="-8" y="4" width="16" height="2.4" fill="#4A0A2A"/>
+  </g>
+</svg>
