@@ -1,0 +1,34 @@
+{
+  "en": {
+    "general": {
+      "accessibility": {
+        "skip_to_text": "Skip to content"
+      }
+    },
+    "cart": {
+      "title": "Your Bag",
+      "empty": "Your bag is empty",
+      "continue_shopping": "Continue Shopping",
+      "checkout": "Check Out",
+      "remove": "Remove",
+      "subtotal": "Subtotal",
+      "shipping_note": "Shipping & taxes calculated at checkout"
+    },
+    "products": {
+      "add_to_bag": "Add to Bag",
+      "sold_out": "Sold Out",
+      "sale": "Sale"
+    },
+    "homepage": {
+      "hero_cta": "Shop The Serum",
+      "read_story": "Read our story"
+    },
+    "newsletter": {
+      "title": "Join the hive",
+      "email_placeholder": "Email address",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "description": "Ingredient education, early access, and 10% off your first order."
+    }
+  }
+}
